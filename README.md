@@ -40,21 +40,29 @@ adaptive-vlm-tamp-research/
 ├── 01_paper_notes/
 │   ├── piginet.md
 │   ├── vlm_tamp.md
-│   └── ...
+│   ├── vizcoast.md
+│   └── integrated_tamp.md
 │
 ├── 02_ideas/
 │   ├── confidence_triggering.md
 │   ├── observer_vlm.md
-│   └── ...
+│   └── adaptive_vlm_tamp.md
 │
 ├── 03_prototypes/
+│   └── prototype_v1/
 │
 ├── 04_experiments/
+│   └── experiment_log.md
 │
 ├── 05_research_questions/
+│   ├── confidence_metrics.md
+│   ├── dependency_reasoning.md
+│   └── open_world_planning.md
 │
 └── 06_timeline/
-
+    ├── research_journey.md
+    └── milestones.md
+    
 ---
 
 
