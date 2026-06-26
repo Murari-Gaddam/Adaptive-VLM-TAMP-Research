@@ -1,75 +1,79 @@
-# **Platform independent benchmarking for task and motion planning (TAMP)**
+# Platform-Independent Benchmarking for Task and Motion Planning (TAMP)
 
-This papers main perpose is to create universal benchmarking metrics for task and planning which is platform independent.
-
-## **Author** : Fabien Lagriffoul
-## **Source** : IEEE Paper
+This paper proposes a platform-independent benchmarking framework for evaluating Task and Motion Planning (TAMP) systems.
 
 ---
 
-## **Problem** : 
-TAMP models from different sources use varies benchmarking metrics.
-This paper proposes 5 standard benchmarking metrics to forster easy communication.
+**Author:** Fabien Lagriffoul
+
+**Source:** IEEE
 
 ---
 
-## **Idea** : 
-There are 5 benchmarking metrics proposed :
+## Research Problem
 
-- **Infeasible task action** : Checking if the task is feasible or not . 
+TAMP systems currently use different evaluation metrics, making comparison across methods difficult.
 
-- **Large task space** : larger the task space more is the search effort .
-
-- **Motion/task tradeoff** : can the task be done is the motion planning is done carefully .
-
-- **Non-Monotonicity** : Do objects need to be moves more than once .
-
-- **Non-Geometric action** : does the problem involve actions which chnage the task planning but not the configuration space.
-
-**Note :**
-- This paper is called platform independent benchmarking as the metrics check the actual problem rather than the robot or the tamp model.
-- Tamp model is tested on its success rate, CPU or GPU usage, time taken, plan optimality.
+The paper proposes five benchmark metrics to standardize evaluation.
 
 ---
 
-## **Strengths** : 
-- Creates a standard benchmarking metric . 
-- Adds a way to catagories problems based on these metrics.
+## Proposed Benchmark Metrics
+
+- **Infeasible Task Action:** Checks whether a task is feasible.
+- **Large Task Space:** Measures search complexity.
+- **Motion/Task Tradeoff:** Evaluates how motion planning affects task feasibility.
+- **Non-Monotonicity:** Measures whether objects must be moved multiple times.
+- **Non-Geometric Actions:** Captures actions that change symbolic state without changing geometry.
+
+> **Note**
+>
+> These metrics are platform-independent because they characterize the planning problem itself rather than the robot or planner implementation.
 
 ---
 
-## **Weaknesses** : 
-- Doesn't factor additional criteria such as object relations.
-- Doesn't consider object rearrangement and motion planninf infeasibility problems as solvable.
+## Strengths
+
+- Standardizes TAMP evaluation.
+- Enables comparison across different planning systems.
+- Categorizes problems according to planning complexity.
 
 ---
 
-## **Recommendations** :
-- Add a benchmmark called **Object Dependencies** into the metrics.
-- By creating catagories of problems it would be easier to understand which metric is true for which.
+## Weaknesses
+
+- Does not explicitly model object dependencies.
+- Assumes several infeasible manipulation scenarios remain unsolved.
 
 ---
 
-## **Key Insights** : 
-By using a benchmarking system like this we can catagories problems and assign the required solver . 
-this metric also helps us finetune a VLM based on the different Catagories of problems
+## Recommendations
+
+- Introduce an **Object Dependency** benchmark.
+- Extend the framework to better represent rearrangement-heavy tasks.
 
 ---
 
-## **Connections with research** : 
+## Key Insights
 
-This paper provides a benchmarking framework that could be extended with an additional Object Dependency metric.
+Benchmark categories could help assign the most appropriate planner to different task types.
 
-Such a benchmark could later be used to evaluate confidence-aware VLM planners and determine when adaptive TAMP triggering becomes necessary.
+These categories may also serve as labels when evaluating or training VLM-based planners.
 
 ---
 
-## **Open Questions** :
-- Can dependency graphs be automatically extracted from a VLM?
+## Connection to My Research
 
+This benchmarking framework could be extended with an **Object Dependency** metric.
+
+Such a benchmark may help evaluate confidence-aware VLM planners and determine when adaptive TAMP triggering becomes necessary.
+
+---
+
+## Open Questions
+
+- Can dependency graphs be extracted automatically from a VLM?
 - Are these metrics sufficient for open-world planning?
-
-- How would dynamic environments affect these benchmarks?
-  
-- Could these metrics predict VLM failure?
+- How should dynamic environments be benchmarked?
+- Can benchmark metrics predict VLM planning failures?
            
