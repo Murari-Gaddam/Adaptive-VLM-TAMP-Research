@@ -1,4 +1,4 @@
-#**Platform independent benchmarking for task and motion planning (TAMP)**
+# **Platform independent benchmarking for task and motion planning (TAMP)**
 
 This papers main perpose is to create universal benchmarking metrics for task and planning which is platform independent.
 
@@ -7,13 +7,13 @@ This papers main perpose is to create universal benchmarking metrics for task an
 
 ---
 
-##**Problem** : 
+## **Problem** : 
 TAMP models from different sources use varies benchmarking metrics.
 This paper proposes 5 standard benchmarking metrics to forster easy communication.
 
 ---
 
-##**Idea** : 
+## **Idea** : 
 There are 5 benchmarking metrics proposed :
 
 -**Infeasible task action** : Checking if the task is feasible or not . 
@@ -32,31 +32,31 @@ There are 5 benchmarking metrics proposed :
 
 ---
 
-##**Strengths** : 
+## **Strengths** : 
 -Creates a standard benchmarking metric . 
 -Adds a way to catagories problems based on these metrics.
 
 ---
 
-##**Weaknesses** : 
+## **Weaknesses** : 
 -Doesn't factor additional criteria such as object relations.
 -Doesn't consider object rearrangement and motion planninf infeasibility problems as solvable.
 
 ---
 
-##**Recommendations** :
+## **Recommendations** :
 -Add a benchmmark called **Object Dependencies** into the metrics.
 -By creating catagories of problems it would be easier to understand which metric is true for which.
 
 ---
 
-##**Key Insights** : 
+## **Key Insights** : 
 By using a benchmarking system like this we can catagories problems and assign the required solver . 
 this metric also helps us finetune a VLM based on the different Catagories of problems
 
 ---
 
-##**Connections with research** : 
+## **Connections with research** : 
 
 This paper provides a benchmarking framework that could be extended with an additional Object Dependency metric.
 
@@ -64,7 +64,7 @@ Such a benchmark could later be used to evaluate confidence-aware VLM planners a
 
 ---
 
-##**Open Questions** :
+## **Open Questions** :
 - Can dependency graphs be automatically extracted from a VLM?
 
 - Are these metrics sufficient for open-world planning?
