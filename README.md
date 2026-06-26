@@ -33,6 +33,7 @@ This project investigates whether uncertainty estimation can be used to combine 
 
 ## Repository Contents
 
+'''
 adaptive-vlm-tamp-research/
 │
 ├── README.md
@@ -62,7 +63,8 @@ adaptive-vlm-tamp-research/
 └── 06_timeline/
     ├── research_journey.md
     └── milestones.md
-    
+
+ '''
 ---
 
 
