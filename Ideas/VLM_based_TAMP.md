@@ -53,7 +53,7 @@ D --> E[Robot]
 
 ---
 
-## disadvantages
+## Disadvantages
 
 - The VlM always has the disadvantage of hallucinating a solution when it doesn't have enough world knowledge.
 - It doesn't have adaptive change in task plan which means it cannot process when there are changes in the environment.
