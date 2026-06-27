@@ -57,7 +57,7 @@ D --> E[Robot]
 
 - The VlM always has the disadvantage of hallucinating a solution when it doesn't have enough world knowledge.
 - It doesn't have adaptive change in task plan which means it cannot process when there are changes in the environment.
-- The task plan can still be infeasible hwihc still needs be checked by the motion plan.
+- The task plan can still be infeasible which still needs be checked by the motion plan.
 
 ---
 
