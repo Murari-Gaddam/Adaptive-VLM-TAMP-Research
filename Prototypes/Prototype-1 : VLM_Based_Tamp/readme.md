@@ -37,6 +37,8 @@ The following is an example:
 
 Model: Gemini Robotics ER 1.6 Preview
 
+Code : [VLM Based Task planning](VLM_Based_Task_Planning.py)
+
 Input:
 - RGB Image
 - Goal Object
