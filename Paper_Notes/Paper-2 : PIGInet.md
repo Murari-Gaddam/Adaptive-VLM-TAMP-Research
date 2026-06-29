@@ -1,6 +1,7 @@
 # Sequence based plan feasibility prediction for efficient task and motion planning
 
 **Author** : Zhutian Yang
+
 **Source** : arXiv
 
 ---
@@ -25,5 +26,46 @@
 
 ---
 
+## Metrics : 
 
+**Efficiency** : Does PIGInet improve speed without success rate loss ?
 
+**Generalization** : can a trained model make acurate predictions in problems with unseen objects ?
+
+**Ablation** : if parts if the input are missing can PIGInet still make accurate predictions ?
+
+> All 3 metrics have been improved
+
+---
+
+## Strengths :
+
+- Reduces compute time and improves optimality by making better planning predictions.
+- Has been finetuned with a relatively small dataset , which has improved the accuracy irrespective of it's size.
+- Due to the encoding in the transformer there is better semantic reasoning internally.
+
+---
+
+## Limitations
+
+- No real life environments or situations have a perfect multi camera setup with perfect
+  3D map , making this idea simulation only.
+- Doesn't consider the properties of the objects and there relations with other objects or surfaces.
+- Cannot plan in a unseen envirnment.
+- Cannot have more than 10 interactive objects in the environment.
+- Doesn't check for further paths when the object is obstructed or occluded
+
+---
+
+## Key insights :
+
+- By using the Embedding of the image and text with other inputs into a single encoder improves accuracy with some to no more increase in compute.
+- PIGInet is a key reference point in the develop of the future projects which involve VLM and LLM based architecture with the same encoding solution.
+
+---
+
+## Research questions : 
+- How do we implement the Encoding in a way that promotes the VLM and LLM based architecture?
+- Can it be used to tranfer embedding from VLM to LLM without large amounts of transition overhead?
+- How does such a small finetuning data set help improve the results?
+- Can this be applied in real world by making changes in how the model works and interprets the environment?
